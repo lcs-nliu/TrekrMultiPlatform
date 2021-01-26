@@ -27,7 +27,7 @@ struct TrekrMultiPlatformApp: App {
                 }
                 
                 NavigationView {
-                WorldMap()
+                    WorldMap(store: store)
                 }
                 
                 .tabItem {
