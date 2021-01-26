@@ -14,7 +14,7 @@ struct TipsList: View {
     
     var body: some View {
        
-        List(tips, id: \.text) { tip in
+        List(tips, id: \.text, children: \.children) { tip in
             
             // if there are children on this particular tip...
             if tip.children != nil {
@@ -34,7 +34,7 @@ struct TipsList: View {
     
     init() {
     // Get a pointer to the file
-        let url = Bundle.main.url(forResource: "tips", withExtension: "json")
+        let url = Bundle.main.url(forResource: "tips", withExtension: "json")!
         
         // Load the contents of the JSON file
         let data = try! Data(contentsOf: url)
