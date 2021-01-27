@@ -27,6 +27,7 @@ struct TipsList: View {
             
             
         }
+        .navigationTitle("Tips")
     }
     
     // Initializer pulls tips data from JSON
@@ -48,6 +49,8 @@ struct TipsList: View {
 
 struct TipsList_Previews: PreviewProvider {
     static var previews: some View {
+        NavigationView {
         TipsList()
+        }
     }
 }
